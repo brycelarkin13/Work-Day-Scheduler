@@ -6,27 +6,7 @@ function checkTime() {
 
     // cuurent day that is displayed at the top of the page
     $("#currentDay").text(today.format("dddd, MMMM Do YYYY, h:mm.ss"));
-
-};
-
-function colorBlock() {
-    let hour = moment().hours();
-
-    $(".time-block").each(function() {
-        let currentHour = parseInt($(this).attr("id"));
-
-        if (currentHour > hour) {
-            $(this).addClass("future");
-        }
-        else if (currentHour === hour) {
-            $(this).addClass("present")
-        }
-        else {
-            $(this).addClass("past");
-        }
-    })
-};
-
+}
 
 // function to change color of time block based on if statement
 setInterval(function() {
@@ -57,4 +37,3 @@ function dayPlanner() {
 // call functions
 dayPlanner();
 checkTime();
-colorBlock();
