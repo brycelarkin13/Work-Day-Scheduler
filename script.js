@@ -31,11 +31,7 @@ function blockColor() {
 
 // save button click function for tiem block
 saveBtn.on("click", function() {
-
-    var time = $(this).children(".hour").text();
-    var note = $(this).children(".notes").val();
-
-    localStorage.setItem(time, note);
+    
 });
 
 function dayPlanner() {
@@ -49,7 +45,7 @@ function dayPlanner() {
 
         
     })
-}
+};
 
 // call functions
 dayPlanner();
